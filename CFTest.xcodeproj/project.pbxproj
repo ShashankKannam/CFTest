@@ -19,6 +19,15 @@
 		06D065E7233284BB00CDFDA4 /* CFMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */; };
 		06D065EA233296D900CDFDA4 /* CFMainFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065E9233296D900CDFDA4 /* CFMainFlowDelegate.swift */; };
 		06D065EC2332970200CDFDA4 /* CFMainViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065EB2332970200CDFDA4 /* CFMainViewPresentable.swift */; };
+		06D065EF23329C5800CDFDA4 /* CFBaseNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065EE23329C5800CDFDA4 /* CFBaseNetworkService.swift */; };
+		06D065F12332ACAF00CDFDA4 /* CarDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065F02332ACAF00CDFDA4 /* CarDetails.swift */; };
+		06D065F32332B24900CDFDA4 /* GetCarsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065F22332B24900CDFDA4 /* GetCarsListService.swift */; };
+		06D065F52332B27300CDFDA4 /* CFServiceDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065F42332B27300CDFDA4 /* CFServiceDispatcher.swift */; };
+		06D065FD2332B3D800CDFDA4 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065FC2332B3D800CDFDA4 /* ArrayExtension.swift */; };
+		06D065FF2332BAE900CDFDA4 /* CarDetailsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065FE2332BAE900CDFDA4 /* CarDetailsTableViewCellViewModel.swift */; };
+		06D066012332BBFD00CDFDA4 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D066002332BBFD00CDFDA4 /* AlertPresentable.swift */; };
+		06D066032332C45500CDFDA4 /* LoadingAnimationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D066022332C45500CDFDA4 /* LoadingAnimationPresentable.swift */; };
+		06D066052332E61800CDFDA4 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D066042332E61800CDFDA4 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,15 @@
 		06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainViewModel.swift; sourceTree = "<group>"; };
 		06D065E9233296D900CDFDA4 /* CFMainFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainFlowDelegate.swift; sourceTree = "<group>"; };
 		06D065EB2332970200CDFDA4 /* CFMainViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainViewPresentable.swift; sourceTree = "<group>"; };
+		06D065EE23329C5800CDFDA4 /* CFBaseNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFBaseNetworkService.swift; sourceTree = "<group>"; };
+		06D065F02332ACAF00CDFDA4 /* CarDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetails.swift; sourceTree = "<group>"; };
+		06D065F22332B24900CDFDA4 /* GetCarsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarsListService.swift; sourceTree = "<group>"; };
+		06D065F42332B27300CDFDA4 /* CFServiceDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFServiceDispatcher.swift; sourceTree = "<group>"; };
+		06D065FC2332B3D800CDFDA4 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		06D065FE2332BAE900CDFDA4 /* CarDetailsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		06D066002332BBFD00CDFDA4 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		06D066022332C45500CDFDA4 /* LoadingAnimationPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationPresentable.swift; sourceTree = "<group>"; };
+		06D066042332E61800CDFDA4 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,16 +125,15 @@
 		06D065AD2332719A00CDFDA4 /* CFTest */ = {
 			isa = PBXGroup;
 			children = (
-				06D065E8233296BC00CDFDA4 /* FlowCoordinator */,
-				06D065AE2332719A00CDFDA4 /* AppDelegate.swift */,
-				06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */,
-				06D065B02332719A00CDFDA4 /* CFMainViewController.swift */,
-				06D065B22332719A00CDFDA4 /* Main.storyboard */,
-				06D065B52332719B00CDFDA4 /* Assets.xcassets */,
-				06D065B72332719B00CDFDA4 /* LaunchScreen.storyboard */,
 				06D065BA2332719B00CDFDA4 /* Info.plist */,
-				06D065E223327F7100CDFDA4 /* CarDetailsTableViewCell.swift */,
-				06D065E323327F7100CDFDA4 /* CarDetailsTableViewCell.xib */,
+				06D065FB2332B3C000CDFDA4 /* Common */,
+				06D065FA2332B34600CDFDA4 /* Model */,
+				06D065F92332B32B00CDFDA4 /* AppBaseFiles */,
+				06D065F82332B2F800CDFDA4 /* ViewModel */,
+				06D065F72332B2EB00CDFDA4 /* Controller */,
+				06D065F62332B2C600CDFDA4 /* View */,
+				06D065ED23329C1C00CDFDA4 /* NetworkService */,
+				06D065E8233296BC00CDFDA4 /* FlowCoordinator */,
 			);
 			path = CFTest;
 			sourceTree = "<group>";
@@ -146,6 +163,72 @@
 				06D065EB2332970200CDFDA4 /* CFMainViewPresentable.swift */,
 			);
 			path = FlowCoordinator;
+			sourceTree = "<group>";
+		};
+		06D065ED23329C1C00CDFDA4 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				06D065EE23329C5800CDFDA4 /* CFBaseNetworkService.swift */,
+				06D065F42332B27300CDFDA4 /* CFServiceDispatcher.swift */,
+				06D065F22332B24900CDFDA4 /* GetCarsListService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		06D065F62332B2C600CDFDA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06D065E223327F7100CDFDA4 /* CarDetailsTableViewCell.swift */,
+				06D065E323327F7100CDFDA4 /* CarDetailsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06D065F72332B2EB00CDFDA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06D065B02332719A00CDFDA4 /* CFMainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		06D065F82332B2F800CDFDA4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */,
+				06D065FE2332BAE900CDFDA4 /* CarDetailsTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		06D065F92332B32B00CDFDA4 /* AppBaseFiles */ = {
+			isa = PBXGroup;
+			children = (
+				06D065AE2332719A00CDFDA4 /* AppDelegate.swift */,
+				06D065B22332719A00CDFDA4 /* Main.storyboard */,
+				06D065B52332719B00CDFDA4 /* Assets.xcassets */,
+				06D065B72332719B00CDFDA4 /* LaunchScreen.storyboard */,
+			);
+			path = AppBaseFiles;
+			sourceTree = "<group>";
+		};
+		06D065FA2332B34600CDFDA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06D065F02332ACAF00CDFDA4 /* CarDetails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06D065FB2332B3C000CDFDA4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				06D065FC2332B3D800CDFDA4 /* ArrayExtension.swift */,
+				06D066002332BBFD00CDFDA4 /* AlertPresentable.swift */,
+				06D066022332C45500CDFDA4 /* LoadingAnimationPresentable.swift */,
+				06D066042332E61800CDFDA4 /* StringExtension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,12 +363,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D065FF2332BAE900CDFDA4 /* CarDetailsTableViewCellViewModel.swift in Sources */,
+				06D065EF23329C5800CDFDA4 /* CFBaseNetworkService.swift in Sources */,
+				06D066052332E61800CDFDA4 /* StringExtension.swift in Sources */,
 				06D065EC2332970200CDFDA4 /* CFMainViewPresentable.swift in Sources */,
 				06D065E423327F7100CDFDA4 /* CarDetailsTableViewCell.swift in Sources */,
+				06D066012332BBFD00CDFDA4 /* AlertPresentable.swift in Sources */,
 				06D065B12332719A00CDFDA4 /* CFMainViewController.swift in Sources */,
 				06D065E7233284BB00CDFDA4 /* CFMainViewModel.swift in Sources */,
+				06D066032332C45500CDFDA4 /* LoadingAnimationPresentable.swift in Sources */,
 				06D065EA233296D900CDFDA4 /* CFMainFlowDelegate.swift in Sources */,
+				06D065F32332B24900CDFDA4 /* GetCarsListService.swift in Sources */,
 				06D065AF2332719A00CDFDA4 /* AppDelegate.swift in Sources */,
+				06D065F12332ACAF00CDFDA4 /* CarDetails.swift in Sources */,
+				06D065F52332B27300CDFDA4 /* CFServiceDispatcher.swift in Sources */,
+				06D065FD2332B3D800CDFDA4 /* ArrayExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

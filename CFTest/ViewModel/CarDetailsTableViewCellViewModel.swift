@@ -1,0 +1,72 @@
+//
+//  CarDetailsTableViewCellViewModel.swift
+//  CFTest
+//
+//  Created by Shashank Kannam on 9/18/19.
+//  Copyright © 2019 sk. All rights reserved.
+//
+
+import UIKit
+
+protocol CFCommonTableViewCellConfigurable { }
+
+protocol CarDetailsTableViewCellConfigurable: CFCommonTableViewCellConfigurable {
+    var carModelText: String? { get }
+    var carDetailsText: NSAttributedString? { get }
+    var dealerPhoneNumber: String? { get }
+}
+
+class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
+    
+    var carModelText: String?
+    var carDetailsText: NSAttributedString?
+    var dealerPhoneNumber: String?
+    
+    init(carListing: Listings) {
+        let year = carListing.year?.description ?? ""
+        let make = carListing.make ?? ""
+        let model = carListing.model ?? ""
+        carModelText =  getJoinedString(args: year, make, model, seperator: " ")
+        var price: String?
+        var carDetailsTexts = [String]()
+        if let priceIn = carListing.listPrice, let formattedPrice = getCurrency(price: priceIn) {
+          price = formattedPrice
+          carDetailsTexts.append(formattedPrice)
+        }
+        if let mileageIn = carListing.mileage {
+           var formattedString =  mileageIn > 1000 ? mileageIn.description.substring(to: mileageIn.description.index(mileageIn.description.endIndex, offsetBy: -3)) : mileageIn.description
+            formattedString += "k Mi"
+            carDetailsTexts.append(formattedString)
+        }
+        if let dealer = carListing.dealer, let city = dealer.city, let state = dealer.state {
+           let formattedAddress = getJoinedString(args: city, state, seperator: ", ")
+            carDetailsTexts.append(formattedAddress)
+        }
+        let carDetailsFormattedText = NSMutableAttributedString(string: getJoinedString(argsA: carDetailsTexts, seperator: " | "))
+        if let priceIn = price {
+            let priceTextRange = carDetailsFormattedText.mutableString.range(of: priceIn, options: .caseInsensitive)
+            carDetailsFormattedText.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 15), range: priceTextRange)
+        }
+        carDetailsText = carDetailsFormattedText
+        if let phoneNumber = carListing.dealer?.phone {
+            dealerPhoneNumber = phoneNumber.getFormattedPhoneNumber ?? ""
+        }
+    }
+    
+    fileprivate func getCurrency(price: Int) -> String? {
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currencyAccounting
+        currencyFormatter.locale = Locale.current
+        return currencyFormatter.string(from: NSNumber(integerLiteral: price))
+    }
+    
+    fileprivate func getJoinedString(args: String..., seperator: String) -> String {
+        return args.joined(separator: seperator)
+    }
+    
+    fileprivate func getJoinedString(argsA: [String], seperator: String) -> String {
+        return argsA.joined(separator: seperator)
+    }
+    
+}

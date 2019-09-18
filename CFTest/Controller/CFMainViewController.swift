@@ -10,7 +10,11 @@ import UIKit
 
 class CFMainViewController: UITableViewController {
 
-    var viewModel: CFMainViewConfigurable!
+    var viewModel: CFMainViewConfigurable! {
+        didSet {
+            viewModel.delegate = self
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,7 @@ class CFMainViewController: UITableViewController {
         registerCells()
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
+        viewModel.configureDataSource()
     }
     
     func registerCells() {
@@ -38,10 +43,18 @@ class CFMainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CarDetailsTableViewCell.reuseID) as? CarDetailsTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CarDetailsTableViewCell.reuseID) as? CarDetailsTableViewCell else { return UITableViewCell()
+        }
         cell.viewModel = viewModel.cellViewModel(section: indexPath.section, row: indexPath.row)
         return cell
     }
 
+}
+
+extension CFMainViewController: CFMainViewDelegate {
+    
+    func reloadData() {
+        tableView.reloadData()
+    }
 }
 

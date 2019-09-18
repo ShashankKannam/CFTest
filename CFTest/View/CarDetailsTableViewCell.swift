@@ -8,26 +8,6 @@
 
 import UIKit
 
-protocol CarDetailsTableViewCellConfigurable: CFCommonTableViewCellConfigurable {
-    
-}
-
-protocol CFCommonTableViewCellConfigurable {
-//    var nibName: String { get }
-//    var reuseID: String { get }
-}
-
-class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
-    
-//    var nibName: String {
-//        return "CarDetailsTableViewCell"
-//    }
-//
-//    var reuseID: String {
-//        return "CarDetailsTableViewCell"
-//    }
-}
-
 class CarDetailsTableViewCell: UITableViewCell {
     
     var viewModel: CFCommonTableViewCellConfigurable? {
@@ -37,7 +17,16 @@ class CarDetailsTableViewCell: UITableViewCell {
             }
         }
     }
-
+    
+    @IBOutlet weak var carImageView: UIImageView!
+    @IBOutlet weak var carModelLabel: UILabel!
+    @IBOutlet weak var carDetailsLabel: UILabel!
+    @IBOutlet weak var dealerPhoneNumberButton: UIButton!
+    
+    @IBAction func numberTapped(_ sender: UIButton) {
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -47,7 +36,10 @@ class CarDetailsTableViewCell: UITableViewCell {
     }
     
     func setupUI(cellViewModel: CarDetailsTableViewCellConfigurable) {
-        
+       carModelLabel.font = UIFont.boldSystemFont(ofSize: 16)
+       carModelLabel.text = cellViewModel.carModelText
+       carDetailsLabel.attributedText = cellViewModel.carDetailsText
+       dealerPhoneNumberButton.setTitle(cellViewModel.dealerPhoneNumber, for: .normal)
     }
     
     static var nibName: String {

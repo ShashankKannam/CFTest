@@ -16,6 +16,7 @@ extension CFMainViewPresentable where Self: CFMainFlowcontroller {
     func showCFMainView() {
         let viewController = CFMainViewController()
         let viewModel = CFMainViewModel()
+        viewModel.flowDelegate = self
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: true)
     }

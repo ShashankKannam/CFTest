@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="534" id="KGk-i7-Jjw" customClass="CarDetailsTableViewCell" customModule="CFTest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="890" height="534"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="518" id="KGk-i7-Jjw" customClass="CarDetailsTableViewCell" customModule="CFTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="890" height="518"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="890" height="533.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="890" height="517.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="urw-lY-qL5" userLabel="carImageView">
@@ -32,39 +32,48 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4R-RW-rrm" userLabel="carDetailsLabel">
-                        <rect key="frame" x="25" y="316" width="840" height="117"/>
+                        <rect key="frame" x="25" y="306" width="840" height="97"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VjE-r5-1f4" userLabel="dealerPhoneNumberLabel">
-                        <rect key="frame" x="25" y="458" width="840" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-ff-tON" userLabel="dealerPhoneNumberButton">
+                        <rect key="frame" x="320" y="413" width="250" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="0l0-he-D7U"/>
+                            <constraint firstAttribute="height" constant="50" id="skw-EV-cs0"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="numberTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MgH-E2-sNj"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="top" secondItem="urw-lY-qL5" secondAttribute="bottom" constant="15" id="8KQ-5s-qmU"/>
                     <constraint firstItem="z4R-RW-rrm" firstAttribute="leading" secondItem="JIe-Cw-u3S" secondAttribute="leading" id="A6U-JE-CXw"/>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="width" secondItem="urw-lY-qL5" secondAttribute="width" id="BZd-BV-Lm8"/>
+                    <constraint firstItem="cOj-ff-tON" firstAttribute="top" secondItem="z4R-RW-rrm" secondAttribute="bottom" constant="10" id="KNB-O6-0uT"/>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="leading" secondItem="urw-lY-qL5" secondAttribute="leading" id="Lwg-rG-y1g"/>
-                    <constraint firstItem="z4R-RW-rrm" firstAttribute="top" secondItem="JIe-Cw-u3S" secondAttribute="bottom" constant="20" id="OZ5-EW-5Z0"/>
-                    <constraint firstItem="VjE-r5-1f4" firstAttribute="trailing" secondItem="z4R-RW-rrm" secondAttribute="trailing" id="OjJ-wP-h5E"/>
-                    <constraint firstItem="VjE-r5-1f4" firstAttribute="width" secondItem="z4R-RW-rrm" secondAttribute="width" id="QNc-66-7d2"/>
+                    <constraint firstItem="z4R-RW-rrm" firstAttribute="top" secondItem="JIe-Cw-u3S" secondAttribute="bottom" constant="10" id="OZ5-EW-5Z0"/>
+                    <constraint firstItem="cOj-ff-tON" firstAttribute="centerX" secondItem="z4R-RW-rrm" secondAttribute="centerX" id="Rar-8Y-4hp"/>
                     <constraint firstItem="urw-lY-qL5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="UDp-md-x9I"/>
                     <constraint firstItem="urw-lY-qL5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Uz3-zl-81H"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="cOj-ff-tON" secondAttribute="bottom" constant="10" id="VkS-9l-O15"/>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="trailing" secondItem="urw-lY-qL5" secondAttribute="trailing" id="Zgn-kC-pbH"/>
-                    <constraint firstItem="VjE-r5-1f4" firstAttribute="leading" secondItem="z4R-RW-rrm" secondAttribute="leading" id="aHn-6y-KjY"/>
                     <constraint firstItem="z4R-RW-rrm" firstAttribute="trailing" secondItem="JIe-Cw-u3S" secondAttribute="trailing" id="k0V-2f-B9e"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="VjE-r5-1f4" secondAttribute="bottom" constant="10" id="oht-F7-0EX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="urw-lY-qL5" secondAttribute="trailing" constant="5" id="tSb-Uk-iEq"/>
                     <constraint firstItem="z4R-RW-rrm" firstAttribute="width" secondItem="JIe-Cw-u3S" secondAttribute="width" id="u1h-uc-tUT"/>
-                    <constraint firstItem="VjE-r5-1f4" firstAttribute="top" secondItem="z4R-RW-rrm" secondAttribute="bottom" constant="25" id="xVf-Bi-d2Y"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="-104.34782608695653" y="227.67857142857142"/>
+            <connections>
+                <outlet property="carDetailsLabel" destination="z4R-RW-rrm" id="i26-fL-OdQ"/>
+                <outlet property="carImageView" destination="urw-lY-qL5" id="UMX-pA-pYi"/>
+                <outlet property="carModelLabel" destination="JIe-Cw-u3S" id="fVB-Rv-gqk"/>
+                <outlet property="dealerPhoneNumberButton" destination="cOj-ff-tON" id="pun-QN-fip"/>
+            </connections>
+            <point key="canvasLocation" x="-104.34782608695653" y="222.32142857142856"/>
         </tableViewCell>
     </objects>
 </document>
