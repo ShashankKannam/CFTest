@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		06D065AF2332719A00CDFDA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065AE2332719A00CDFDA4 /* AppDelegate.swift */; };
-		06D065B12332719A00CDFDA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065B02332719A00CDFDA4 /* ViewController.swift */; };
+		06D065B12332719A00CDFDA4 /* CFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065B02332719A00CDFDA4 /* CFMainViewController.swift */; };
 		06D065B42332719A00CDFDA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D065B22332719A00CDFDA4 /* Main.storyboard */; };
 		06D065B62332719B00CDFDA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D065B52332719B00CDFDA4 /* Assets.xcassets */; };
 		06D065B92332719B00CDFDA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D065B72332719B00CDFDA4 /* LaunchScreen.storyboard */; };
 		06D065C42332719B00CDFDA4 /* CFTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065C32332719B00CDFDA4 /* CFTestTests.swift */; };
 		06D065CF2332719B00CDFDA4 /* CFTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065CE2332719B00CDFDA4 /* CFTestUITests.swift */; };
+		06D065E423327F7100CDFDA4 /* CarDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065E223327F7100CDFDA4 /* CarDetailsTableViewCell.swift */; };
+		06D065E523327F7100CDFDA4 /* CarDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D065E323327F7100CDFDA4 /* CarDetailsTableViewCell.xib */; };
+		06D065E7233284BB00CDFDA4 /* CFMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */; };
+		06D065EA233296D900CDFDA4 /* CFMainFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065E9233296D900CDFDA4 /* CFMainFlowDelegate.swift */; };
+		06D065EC2332970200CDFDA4 /* CFMainViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D065EB2332970200CDFDA4 /* CFMainViewPresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		06D065AB2332719A00CDFDA4 /* CFTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D065AE2332719A00CDFDA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06D065B02332719A00CDFDA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06D065B02332719A00CDFDA4 /* CFMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainViewController.swift; sourceTree = "<group>"; };
 		06D065B32332719A00CDFDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D065B52332719B00CDFDA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D065B82332719B00CDFDA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		06D065CA2332719B00CDFDA4 /* CFTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CFTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D065CE2332719B00CDFDA4 /* CFTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFTestUITests.swift; sourceTree = "<group>"; };
 		06D065D02332719B00CDFDA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D065E223327F7100CDFDA4 /* CarDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		06D065E323327F7100CDFDA4 /* CarDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainViewModel.swift; sourceTree = "<group>"; };
+		06D065E9233296D900CDFDA4 /* CFMainFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainFlowDelegate.swift; sourceTree = "<group>"; };
+		06D065EB2332970200CDFDA4 /* CFMainViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFMainViewPresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +107,16 @@
 		06D065AD2332719A00CDFDA4 /* CFTest */ = {
 			isa = PBXGroup;
 			children = (
+				06D065E8233296BC00CDFDA4 /* FlowCoordinator */,
 				06D065AE2332719A00CDFDA4 /* AppDelegate.swift */,
-				06D065B02332719A00CDFDA4 /* ViewController.swift */,
+				06D065E6233284BB00CDFDA4 /* CFMainViewModel.swift */,
+				06D065B02332719A00CDFDA4 /* CFMainViewController.swift */,
 				06D065B22332719A00CDFDA4 /* Main.storyboard */,
 				06D065B52332719B00CDFDA4 /* Assets.xcassets */,
 				06D065B72332719B00CDFDA4 /* LaunchScreen.storyboard */,
 				06D065BA2332719B00CDFDA4 /* Info.plist */,
+				06D065E223327F7100CDFDA4 /* CarDetailsTableViewCell.swift */,
+				06D065E323327F7100CDFDA4 /* CarDetailsTableViewCell.xib */,
 			);
 			path = CFTest;
 			sourceTree = "<group>";
@@ -123,6 +137,15 @@
 				06D065D02332719B00CDFDA4 /* Info.plist */,
 			);
 			path = CFTestUITests;
+			sourceTree = "<group>";
+		};
+		06D065E8233296BC00CDFDA4 /* FlowCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				06D065E9233296D900CDFDA4 /* CFMainFlowDelegate.swift */,
+				06D065EB2332970200CDFDA4 /* CFMainViewPresentable.swift */,
+			);
+			path = FlowCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +255,7 @@
 				06D065B92332719B00CDFDA4 /* LaunchScreen.storyboard in Resources */,
 				06D065B62332719B00CDFDA4 /* Assets.xcassets in Resources */,
 				06D065B42332719A00CDFDA4 /* Main.storyboard in Resources */,
+				06D065E523327F7100CDFDA4 /* CarDetailsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D065B12332719A00CDFDA4 /* ViewController.swift in Sources */,
+				06D065EC2332970200CDFDA4 /* CFMainViewPresentable.swift in Sources */,
+				06D065E423327F7100CDFDA4 /* CarDetailsTableViewCell.swift in Sources */,
+				06D065B12332719A00CDFDA4 /* CFMainViewController.swift in Sources */,
+				06D065E7233284BB00CDFDA4 /* CFMainViewModel.swift in Sources */,
+				06D065EA233296D900CDFDA4 /* CFMainFlowDelegate.swift in Sources */,
 				06D065AF2332719A00CDFDA4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CFTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CFTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
