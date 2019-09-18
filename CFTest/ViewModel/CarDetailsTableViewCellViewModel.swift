@@ -14,6 +14,7 @@ protocol CarDetailsTableViewCellConfigurable: CFCommonTableViewCellConfigurable 
     var carModelText: String? { get }
     var carDetailsText: NSAttributedString? { get }
     var dealerPhoneNumber: String? { get }
+    var carImage: UIImage? { get }
 }
 
 class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
@@ -21,6 +22,7 @@ class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
     var carModelText: String?
     var carDetailsText: NSAttributedString?
     var dealerPhoneNumber: String?
+    var carImage: UIImage?
     
     init(carListing: Listings) {
         let year = carListing.year?.description ?? ""
@@ -50,6 +52,10 @@ class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
         carDetailsText = carDetailsFormattedText
         if let phoneNumber = carListing.dealer?.phone {
             dealerPhoneNumber = phoneNumber.getFormattedPhoneNumber ?? ""
+        }
+        
+        if let imageUrl = carListing.images?.firstPhoto?.medium {
+            // TODO: KingFisher
         }
     }
     
