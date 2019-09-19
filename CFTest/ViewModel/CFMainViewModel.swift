@@ -26,8 +26,8 @@ protocol CFMainViewConfigurable: class {
 
 class CFMainViewModel: CFMainViewConfigurable {
     
-    var delegate: CFMainViewDelegate?
-    var flowDelegate: CFMainFlowDelegate?
+    weak var delegate: CFMainViewDelegate?
+    weak var flowDelegate: CFMainFlowDelegate?
     
     var carListings: [Listings] = []
     

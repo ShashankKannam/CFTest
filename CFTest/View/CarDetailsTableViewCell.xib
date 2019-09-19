@@ -19,26 +19,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="890" height="517.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="urw-lY-qL5" userLabel="carImageView">
-                        <rect key="frame" x="25" y="60" width="840" height="200"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="urw-lY-qL5" userLabel="carImageView">
+                        <rect key="frame" x="25" y="60" width="840" height="250"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="200" id="gWl-lY-PI5"/>
+                            <constraint firstAttribute="height" constant="250" id="nBc-6K-BEv"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-Cw-u3S" userLabel="carModelLabel">
-                        <rect key="frame" x="25" y="275" width="840" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-Cw-u3S" userLabel="carModelLabel">
+                        <rect key="frame" x="25" y="325" width="840" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4R-RW-rrm" userLabel="carDetailsLabel">
-                        <rect key="frame" x="25" y="306" width="840" height="97"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4R-RW-rrm" userLabel="carDetailsLabel">
+                        <rect key="frame" x="25" y="355.5" width="840" height="81.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOj-ff-tON" userLabel="dealerPhoneNumberButton">
-                        <rect key="frame" x="320" y="413" width="250" height="50"/>
+                        <rect key="frame" x="320" y="447" width="250" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="250" id="0l0-he-D7U"/>
                             <constraint firstAttribute="height" constant="50" id="skw-EV-cs0"/>
@@ -50,20 +50,18 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="cOj-ff-tON" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="7h1-WS-MtU"/>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="top" secondItem="urw-lY-qL5" secondAttribute="bottom" constant="15" id="8KQ-5s-qmU"/>
                     <constraint firstItem="z4R-RW-rrm" firstAttribute="leading" secondItem="JIe-Cw-u3S" secondAttribute="leading" id="A6U-JE-CXw"/>
-                    <constraint firstItem="JIe-Cw-u3S" firstAttribute="width" secondItem="urw-lY-qL5" secondAttribute="width" id="BZd-BV-Lm8"/>
                     <constraint firstItem="cOj-ff-tON" firstAttribute="top" secondItem="z4R-RW-rrm" secondAttribute="bottom" constant="10" id="KNB-O6-0uT"/>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="leading" secondItem="urw-lY-qL5" secondAttribute="leading" id="Lwg-rG-y1g"/>
                     <constraint firstItem="z4R-RW-rrm" firstAttribute="top" secondItem="JIe-Cw-u3S" secondAttribute="bottom" constant="10" id="OZ5-EW-5Z0"/>
-                    <constraint firstItem="cOj-ff-tON" firstAttribute="centerX" secondItem="z4R-RW-rrm" secondAttribute="centerX" id="Rar-8Y-4hp"/>
                     <constraint firstItem="urw-lY-qL5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="UDp-md-x9I"/>
                     <constraint firstItem="urw-lY-qL5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Uz3-zl-81H"/>
                     <constraint firstAttribute="bottomMargin" secondItem="cOj-ff-tON" secondAttribute="bottom" constant="10" id="VkS-9l-O15"/>
                     <constraint firstItem="JIe-Cw-u3S" firstAttribute="trailing" secondItem="urw-lY-qL5" secondAttribute="trailing" id="Zgn-kC-pbH"/>
                     <constraint firstItem="z4R-RW-rrm" firstAttribute="trailing" secondItem="JIe-Cw-u3S" secondAttribute="trailing" id="k0V-2f-B9e"/>
                     <constraint firstAttribute="trailingMargin" secondItem="urw-lY-qL5" secondAttribute="trailing" constant="5" id="tSb-Uk-iEq"/>
-                    <constraint firstItem="z4R-RW-rrm" firstAttribute="width" secondItem="JIe-Cw-u3S" secondAttribute="width" id="u1h-uc-tUT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol CFCommonTableViewCellConfigurable { }
+protocol CFCommonTableViewCellConfigurable: CallPhoneNumberPresentable { }
 
 protocol CarDetailsTableViewCellConfigurable: CFCommonTableViewCellConfigurable {
     var carModelText: String? { get }
     var carDetailsText: NSAttributedString? { get }
     var dealerPhoneNumber: String? { get }
-    var carImage: UIImage? { get }
+    var carImageURL: String? { get }
 }
 
 class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
@@ -22,7 +22,7 @@ class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
     var carModelText: String?
     var carDetailsText: NSAttributedString?
     var dealerPhoneNumber: String?
-    var carImage: UIImage?
+    var carImageURL: String?
     
     init(carListing: Listings) {
         let year = carListing.year?.description ?? ""
@@ -36,8 +36,8 @@ class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
           carDetailsTexts.append(formattedPrice)
         }
         if let mileageIn = carListing.mileage {
-           var formattedString =  mileageIn > 1000 ? mileageIn.description.substring(to: mileageIn.description.index(mileageIn.description.endIndex, offsetBy: -3)) : mileageIn.description
-            formattedString += "k Mi"
+           var formattedString =  mileageIn > 1000 ? (mileageIn.description.substring(to: mileageIn.description.index(mileageIn.description.endIndex, offsetBy: -3)) + "k") : mileageIn.description
+            formattedString += " Mi"
             carDetailsTexts.append(formattedString)
         }
         if let dealer = carListing.dealer, let city = dealer.city, let state = dealer.state {
@@ -54,8 +54,8 @@ class CarDetailsTableViewCellViewModel: CarDetailsTableViewCellConfigurable {
             dealerPhoneNumber = phoneNumber.getFormattedPhoneNumber ?? ""
         }
         
-        if let imageUrl = carListing.images?.firstPhoto?.medium {
-            // TODO: KingFisher
+        if let imageUrl = carListing.images?.firstPhoto?.large {
+            carImageURL = imageUrl
         }
     }
     

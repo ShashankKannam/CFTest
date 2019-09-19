@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CarDetailsTableViewCell: UITableViewCell {
     
@@ -24,7 +25,9 @@ class CarDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var dealerPhoneNumberButton: UIButton!
     
     @IBAction func numberTapped(_ sender: UIButton) {
-        
+        if let cellViewModel = viewModel as? CarDetailsTableViewCellConfigurable, let dealerPhoneNumber = cellViewModel.dealerPhoneNumber {
+            cellViewModel.call(phoneNumber: dealerPhoneNumber)
+        }
     }
     
     override func awakeFromNib() {
@@ -36,10 +39,20 @@ class CarDetailsTableViewCell: UITableViewCell {
     }
     
     func setupUI(cellViewModel: CarDetailsTableViewCellConfigurable) {
+       setupImage(urlString: cellViewModel.carImageURL)
        carModelLabel.font = UIFont.boldSystemFont(ofSize: 16)
        carModelLabel.text = cellViewModel.carModelText
        carDetailsLabel.attributedText = cellViewModel.carDetailsText
        dealerPhoneNumberButton.setTitle(cellViewModel.dealerPhoneNumber, for: .normal)
+    }
+    
+    func setupImage(urlString: String?) {
+        guard let urlStringIn = urlString, let url = URL(string: urlStringIn) else {
+            carImageView?.image = UIImage(named: "noCarPhoto")
+            return
+        }
+        carImageView?.kf.indicatorType = .activity
+        carImageView?.kf.setImage(with: url, placeholder: UIImage(named: "awaitingImage"), options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
     }
     
     static var nibName: String {
