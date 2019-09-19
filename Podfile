@@ -7,6 +7,7 @@ target 'CFTest' do
 
   # Pods for CFTest
     pod 'Kingfisher'
+    # Haven't created private pod, added code in CFTestTarget itself
 
   target 'CFTestTests' do
     inherit! :search_paths

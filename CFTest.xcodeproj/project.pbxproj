@@ -144,10 +144,13 @@
 		06D065AD2332719A00CDFDA4 /* CFTest */ = {
 			isa = PBXGroup;
 			children = (
+				06D065AE2332719A00CDFDA4 /* AppDelegate.swift */,
+				06D065B22332719A00CDFDA4 /* Main.storyboard */,
+				06D065B72332719B00CDFDA4 /* LaunchScreen.storyboard */,
+				06FE1A1D23330105004EB082 /* Assets.xcassets */,
 				06D065BA2332719B00CDFDA4 /* Info.plist */,
 				06D065FB2332B3C000CDFDA4 /* Common */,
 				06D065FA2332B34600CDFDA4 /* Model */,
-				06D065F92332B32B00CDFDA4 /* AppBaseFiles */,
 				06D065F82332B2F800CDFDA4 /* ViewModel */,
 				06D065F72332B2EB00CDFDA4 /* Controller */,
 				06D065F62332B2C600CDFDA4 /* View */,
@@ -218,17 +221,6 @@
 				06D065FE2332BAE900CDFDA4 /* CarDetailsTableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		06D065F92332B32B00CDFDA4 /* AppBaseFiles */ = {
-			isa = PBXGroup;
-			children = (
-				06D065AE2332719A00CDFDA4 /* AppDelegate.swift */,
-				06D065B22332719A00CDFDA4 /* Main.storyboard */,
-				06D065B72332719B00CDFDA4 /* LaunchScreen.storyboard */,
-				06FE1A1D23330105004EB082 /* Assets.xcassets */,
-			);
-			path = AppBaseFiles;
 			sourceTree = "<group>";
 		};
 		06D065FA2332B34600CDFDA4 /* Model */ = {

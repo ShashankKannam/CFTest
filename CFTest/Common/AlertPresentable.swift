@@ -9,6 +9,12 @@
 import UIKit
 
 protocol AlertPresentable {
+    
+    /// Shows alert with OK button
+    ///
+    /// - Parameters:
+    ///   - message: alert message
+    ///   - title: alert title
     func showBasicAlert(message: String, title: String)
 }
 

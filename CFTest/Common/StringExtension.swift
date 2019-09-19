@@ -10,6 +10,7 @@ import Foundation
 
 extension String {
     
+    /// Gives formatted phone number - (XXX) XXX-XXXX
     var getFormattedPhoneNumber: String? {
         
         func getFormattedString(value: String) -> String? {
@@ -29,6 +30,9 @@ extension String {
         return getFormattedString(value: acceptableCharacters)
     }
     
+    /// Gives substring within closed range
+    ///
+    /// - Parameter bounds: CountableClosedRange
     subscript (bounds: CountableClosedRange<Int>) -> Substring {
         let start = index(startIndex, offsetBy: bounds.lowerBound)
         let end = index(startIndex, offsetBy: bounds.upperBound)
@@ -38,6 +42,11 @@ extension String {
 
 
 extension NSAttributedString {
+    
+    /// Gives range of search string
+    ///
+    /// - Parameter string: search string
+    /// - Returns: range
     func rangeOf(string: String) -> Range<String.Index>? {
         return self.string.range(of: string)
     }

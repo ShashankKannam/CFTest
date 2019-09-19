@@ -9,6 +9,10 @@
 import UIKit
 
 protocol CallPhoneNumberPresentable {
+    
+   /// Opens caller tuner
+   ///
+   /// - Parameter phoneNumber: phone number to call
    func call(phoneNumber: String)
 }
 

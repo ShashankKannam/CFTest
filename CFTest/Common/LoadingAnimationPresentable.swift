@@ -8,6 +8,11 @@
 
 import UIKit
 
+/// Loading state
+///
+/// - start: start
+/// - stop: stop
+/// - animating: is animating
 enum LoadingAnimationState {
     case start
     case stop
@@ -15,6 +20,10 @@ enum LoadingAnimationState {
 }
 
 protocol LoadingAnimationPresentable {
+    
+    /// set animation state to show/hide animation
+    ///
+    /// - Parameter state: LoadingAnimationState
     func configureLoadingAnimation(state: LoadingAnimationState)
 }
 

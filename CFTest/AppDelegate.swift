@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // As there is no custom navigation controller, setting up delegate here
         if let navigationController = window?.rootViewController as? UINavigationController {
             let flowController = CFMainFlowcontroller(navigationController: navigationController)
             flowController.showCFMainView()

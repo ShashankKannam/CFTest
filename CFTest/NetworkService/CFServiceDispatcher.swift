@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Used to use actual service for mock serive, in this assignment haven't added mock services
 class CFServiceDispatcher {
     
     static let shared = CFServiceDispatcher()
